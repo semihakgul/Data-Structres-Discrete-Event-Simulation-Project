@@ -100,7 +100,7 @@ struct AirPort{
 
     struct  compareForArrival{
         bool operator() (Passenger &i, Passenger &j){
-
+            if(i.arrival_for_queue==j.arrival_for_queue) return i.FIRST_ARRIVAL>j.FIRST_ARRIVAL;
             return i.arrival_for_queue>j.arrival_for_queue;
         }
     };
